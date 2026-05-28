@@ -30,7 +30,14 @@ Designed for geology, oil & gas, surveying, and GIS-related workflows.
 
 ## Screenshots
 
-<img width="1201" height="729" alt="image" src="https://github.com/user-attachments/assets/be29083f-e495-40a1-9f41-7a72fb980cd3" />
+<img width="1362" height="1116" alt="1" src="https://github.com/user-attachments/assets/185b8ca7-a1e7-40ae-8ce7-7806dd6dea5c" />
+<img width="1366" height="1116" alt="5" src="https://github.com/user-attachments/assets/e1c47d3d-0542-4dfb-aac3-989826ac71e0" />
+<img width="1365" height="1116" alt="4" src="https://github.com/user-attachments/assets/d1b3f434-1096-48e8-a47c-ac469874ce6c" />
+<img width="1207" height="1116" alt="3" src="https://github.com/user-attachments/assets/835cbe31-b90f-4501-af17-181bb65af2c0" />
+<img width="1366" height="1116" alt="2" src="https://github.com/user-attachments/assets/524b25de-6e86-45ca-a156-6079c91ed208" />
+<img width="1366" height="1116" alt="6" src="https://github.com/user-attachments/assets/6186265c-cab8-47c8-805c-2f31591e0ad4" />
+
+
 
 
 ---
