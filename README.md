@@ -1,90 +1,226 @@
+# 🌍 Coordinate Mapping — Well UTM ↔ Lat/Lon
 
-## Coordinate Mapping — Well UTM ↔ Lat/Lon
-Coordinate Mapping — Well UTM ↔ Lat/Lon A Tkinter-based desktop application for geoscientists and engineers to convert, manage, and visualize well coordinates between Lat/Lon (decimal &amp; DMS) and UTM systems, with Google Maps integration and multiple export formats (CSV, JSON, KML).
-
-
-A Python desktop application built with **Tkinter** for converting, managing, and exporting well and point coordinates between **Latitude/Longitude** and **UTM** coordinate systems.  
-Designed for geology, oil & gas, surveying, and GIS-related workflows.
-
----
-
-## Features
-
-- Convert **Lat/Lon ↔ UTM** (WGS84)
-- Supports **Decimal Degrees** and **DMS** formats  
-  - Example: `30.957, 49.11`
-  - Example: `30°57'25.2"N 49°06'37.4"E`
-- Automatic UTM zone detection
-- Manage multiple wells/points in a table
-- Edit points via double-click
-- Open points directly in **Google Maps**
-- Export data to:
-  - CSV
-  - JSON
-  - KML (Google Earth)
-- Import from JSON
-- Theme selection (Modern, Classic, Girly, Formal)
-- Simple, offline desktop GUI
+<div align="center">
+  
+  **تبدیل هوشمند مختصات جغرافیایی برای مهندسان و ژئولوژیست‌ها**
+  
+  [![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
+  [![Tkinter](https://img.shields.io/badge/GUI-Tkinter-orange?logo=python)](https://docs.python.org/3/library/tkinter.html)
+  [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
+  [![GitHub Stars](https://img.shields.io/github/stars/parvizt/Cordinate_mapping?style=social)](https://github.com/parvizt/Cordinate_mapping)
+  
+</div>
 
 ---
 
-## Screenshots
-
-<img width="1362" height="1116" alt="1" src="https://github.com/user-attachments/assets/185b8ca7-a1e7-40ae-8ce7-7806dd6dea5c" />
-<img width="1366" height="1116" alt="5" src="https://github.com/user-attachments/assets/e1c47d3d-0542-4dfb-aac3-989826ac71e0" />
-<img width="1365" height="1116" alt="4" src="https://github.com/user-attachments/assets/d1b3f434-1096-48e8-a47c-ac469874ce6c" />
-<img width="1207" height="1116" alt="3" src="https://github.com/user-attachments/assets/835cbe31-b90f-4501-af17-181bb65af2c0" />
-<img width="1366" height="1116" alt="2" src="https://github.com/user-attachments/assets/524b25de-6e86-45ca-a156-6079c91ed208" />
-<img width="1366" height="1116" alt="6" src="https://github.com/user-attachments/assets/6186265c-cab8-47c8-805c-2f31591e0ad4" />
-
-
-
+## 📋 فهرست مطالب
+- [🎯 ویژگی‌های کلیدی](#-ویژگیهای-کلیدی)
+- [🚀 شروع سریع](#-شروع-سریع)
+- [💻 نحوه استفاده](#-نحوه-استفاده)
+- [📦 صادرات داده‌ها](#-صادرات-دادهها)
+- [🗺️ یکپارچگی نقشه](#-یکپارچگی-نقشه)
+- [📋 الزامات سیستم](#-الزامات-سیستم)
+- [👨‍💻 درباره](#-درباره)
 
 ---
 
-## Requirements
+## 🎯 ویژگی‌های کلیدی
 
-- Python **3.9+**
-- Required library:
-  ```bash
-  pip install pyproj
+✅ **تبدیل دقیق مختصات:**
+- UTM ↔ Latitude/Longitude
+- فرمت‌های مختلف: DMS (Degree, Minute, Second) و Decimal
+- سیستم‌های مختصات کامل
 
-## How to Run  
+✅ **رابط کاربری دسکتاپی:**
+- Tkinter مدرن و کاربرپسند
+- مدیریت چندین چاه‌ (Well)
+- ویرایش و حذف فوری
+
+✅ **یکپارچگی Google Maps:**
+- نمایش مختصات بر روی نقشه
+- لینک‌های مستقیم به Google Maps
+
+✅ **صادرات چند‌فرمتی:**
+- 📊 CSV (برای Excel)
+- 📄 JSON (برای API‌ها)
+- 🗺️ KML (برای Google Earth)
+
+✅ **ذخیره‌سازی دائمی:**
+- داده‌های خودکار ذخیره
+- بازیابی سریع پروژه‌های قدیمی
+
+---
+
+## 📸 نمونه‌های صفحه
+
+<img width="1362" height="1116" alt="نمونه 1" src="https://github.com/user-attachments/assets/185b8ca7-a1e7-40ae-8ce7-7806dd6dea5c" />
+
+---
+
+## 🚀 شروع سریع
+
+### 📥 نصب
+
+**پیش‌نیازها:**
+```bash
+Python 3.9+
+```
+
+**گام 1: Clone ریپوزیتوری**
+```bash
+git clone https://github.com/parvizt/Cordinate_mapping.git
+cd Cordinate_mapping
+```
+
+**گام 2: نصب وابستگی‌ها**
+```bash
+pip install pyproj
+```
+
+**گام 3: اجرای برنامه**
+```bash
 python well_coordinate_mapping.py
+```
 
-## Input Examples
-Latitude / Longitude
-30°57'25.2"N 49°06'37.4"E
-30.957, 49.11
-30.957 49.11
+---
 
-## UTM
-Easting: 500000
+## 💻 نحوه استفاده
+
+### 1️⃣ **تبدیل مختصات**
+
+**فرمت‌های ورودی پذیرفته‌شده:**
+
+| فرمت | مثال |
+|------|------|
+| **DMS** | `30°57'25.2"N 49°06'37.4"E` |
+| **Decimal** | `30.957, 49.11` |
+| **فاصله‌دار** | `30.957 49.11` |
+
+### 2️⃣ **تبدیل UTM**
+```
+Easting:  500000
 Northing: 3420000
-Zone: 39N
+Zone:     39N
+```
 
-## Exports
-CSV – Excel, Power BI, databases
-JSON – Data exchange and automation
-KML – Google Earth visualization
+### 3️⃣ **نمایش بر روی نقشه** 🗺️
+- کپی لینک Google Maps
+- نمایش مسیر (Route)
+- باز کردن تمام نقاط
 
-## Google Maps Integration
-Copy Google Maps link for selected points
-Open selected points as a route
-Open all points at once in Google Maps
+---
 
-## Author
-Parviz Tajdari
-Geologist | Python Developer | Geospatial Tools
-GitHub: https://github.com/parvizt
+## 📦 صادرات داده‌ها
 
-## Notes
-Intended for engineering and geological workflows
-Uses WGS84 datum
-Offline, lightweight, suitable for field laptops
+| فرمت | کاربرد | 💾 |
+|------|--------|-----|
+| **CSV** | Excel، Power BI، پایگاه‌های داده | ✅ |
+| **JSON** | تبادل داده، API‌ها | ✅ |
+| **KML** | Google Earth، نقشه‌گری | ✅ |
 
-## Future Improvements
-DXF export
-Batch import from CSV
-Map preview inside the app
-Well trajectory support
+---
+
+## 🗺️ ویژگی‌های نقشه‌ای
+
+```
+✓ یکپارچگی Google Maps
+✓ نمایش مختصات بر روی نقشه
+✓ لینک‌های مستقیم به نقاط
+✓ دسته‌ای در یک نقشه
+```
+
+---
+
+## 📋 الزامات سیستم
+
+| موارد | نسخه/وضعیت |
+|------|----------|
+| Python | 3.9+ ✅ |
+| pyproj | latest ✅ |
+| Tkinter | built-in ✅ |
+
+---
+
+## 🎨 انتخاب تم‌ها
+
+برنامه چندین تم ارائه می‌دهد:
+- 🎨 Modern
+- 📘 Classic
+- 💓 Girly
+- 💼 Formal
+
+---
+
+## 📝 نمونه داده
+
+```json
+{
+  "wells": [
+    {
+      "name": "Well-01",
+      "latitude": 30.957,
+      "longitude": 49.11,
+      "utm_zone": "39N",
+      "easting": 500000,
+      "northing": 3420000
+    }
+  ]
+}
+```
+
+---
+
+## 🔧 ویژگی‌های تکنیکی
+
+- 🖥️ **GUI:** Tkinter
+- 📍 **مختصات:** pyproj (WGS84)
+- 📊 **داده‌ها:** JSON/CSV
+- ⚡ **بدون اینترنت:** کار آفلاین
+- 🎯 **سبک:** مناسب برای لپ‌تاپ میدانی
+
+---
+
+## 🤝 مشارکت
+
+ما از کمک‌های شما استقبال می‌کنیم! 💪
+
+**برای مشارکت:**
+```bash
+1. Fork کنید 🍴
+2. Branch جدید بسازید
+3. تغییرات را commit کنید
+4. Pull Request بسازید
+```
+
+---
+
+## 📄 لایسنس
+
+**Apache License 2.0** — برای استفاده و توسعه آزادانه
+
+---
+
+## 👨‍💻 درباره
+
+**نویسنده:** پرویز تاجداری
+- 🔬 ژئولوژیست | توسعه‌دهنده Python | ابزارهای جغرافیایی
+- 🔗 [GitHub](https://github.com/parvizt)
+
+---
+
+## 🚀 بهبود‌های آینده
+
+- 🗂️ صادرات DXF
+- 📥 واردات دسته‌ای از CSV
+- 🗺️ نمایش نقشه درون برنامه
+- 🌊 پشتیبانی از مسیر چاه
+
+---
+
+<div align="center">
+
+⭐ **اگر این پروژه مفید بود، لطفاً ستاره دهید!**
+
+![GitHub last commit](https://img.shields.io/github/last-commit/parvizt/Cordinate_mapping?style=flat-square)
+
+</div>
